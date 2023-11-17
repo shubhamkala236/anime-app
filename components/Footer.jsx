@@ -11,6 +11,7 @@ const Footer = () => {
             src="https://s2.bunnycdn.ru/assets/sites/animesuge/logo.png"
             fill={true}
             alt="image"
+            sizes={100}
           />
         </div>
         <p className="mx-2">Copyright © animesuge.to. All Rights Reserved</p>

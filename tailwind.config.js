@@ -1,12 +1,15 @@
 /** @type {import('tailwindcss').Config} */
+const {nextui} = require("@nextui-org/theme");
+
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
-    './app/**/*.{js,jsx}',
-    './src/**/*.{js,jsx}',
-	],
+    "./pages/**/*.{js,jsx}",
+    "./components/**/*.{js,jsx}",
+    "./app/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx}",
+    './node_modules/@nextui-org/theme/dist/components/pagination.js',
+  ],
   theme: {
     container: {
       center: true,
@@ -50,6 +53,9 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        aspectRatio: {
+          "4/3": "4 / 3",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -72,5 +78,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-}
+  plugins: [nextui(),require("tailwindcss-animate")],
+};

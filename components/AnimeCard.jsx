@@ -7,15 +7,16 @@ const AnimeCard = ({ anime }) => {
   var name = anime?.title;
   var episodes = anime?.episodes;
   var type = anime?.type;
+  var id = anime?.mal_id;
 
   return (
     <div className="anime-card-container w-[10vmax] flex flex-col mx-3 my-3">
-      <Link href={"/"}>
+      <Link href={`/Details/${id}`}>
         <div className="anime-img relative h-[15vmax] overflow-hidden">
           <div className="type-anime absolute bg-red-600 z-10 shadow-md shadow-slate-800 text-xs p-[0.1vmax]">
             {type}
           </div>
-          <Image className="object-cover transition hover:scale-105 " src={image} fill={true} alt="image" />
+          <Image className="object-cover transition hover:scale-105 " src={image} fill={true}  sizes={100} alt="image" />
         </div>
         
         <div className="anime-episodes text-center">

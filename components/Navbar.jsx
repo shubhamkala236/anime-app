@@ -16,6 +16,7 @@ const Navbar = () => {
               src="https://s2.bunnycdn.ru/assets/sites/animesuge/logo.png"
               fill={true}
               alt="image"
+              sizes={100}
             />
           </Link>
         </div>
